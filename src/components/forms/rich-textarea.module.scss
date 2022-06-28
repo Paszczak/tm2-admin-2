@@ -1,0 +1,89 @@
+@use '../../styles/variables';
+
+.row {
+  width: 100%;
+  min-width: 20rem;
+  margin-bottom: 1rem;
+
+  .label {
+    display: block;
+    color: map-get($map: variables.$colors, $key: 'decoration');
+    margin-bottom: 0.5rem;
+  }
+
+  .info {
+    font-size: 0.8rem;
+    color: map-get($map: variables.$colors, $key: 'border');
+
+    a {
+      font-size: inherit;
+      text-decoration: none;
+      color: map-get($map: variables.$colors, $key: 'border');
+
+      &:hover {
+        color: map-get($map: variables.$colors, $key: 'decoration');
+      }
+    }
+  }
+
+  .inputContainer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    .input {
+      width: 100%;
+      height: 6em;
+      padding: 0.5em;
+      font-family: inherit;
+      font-size: 1rem;
+      border: 1px solid map-get($map: variables.$colors, $key: 'border');
+      outline: none;
+
+      &:focus {
+        border-color: map-get($map: variables.$colors, $key: 'decoration');
+      }
+    }
+
+    .invalid {
+      border-color: map-get($map: variables.$colors, $key: 'alert');
+    }
+
+    .valid {
+      border-color: map-get($map: variables.$colors, $key: 'ok');
+      color: map-get($map: variables.$colors, $key: 'ok');
+    }
+
+    .controls {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      margin-left: 0.5rem;
+
+      .styleIcon {
+        margin-bottom: 0.5rem;
+        cursor: pointer;
+
+        svg {
+          height: 1.25rem;
+          width: auto;
+          fill: map-get($map: variables.$colors, $key: 'border');
+        }
+
+        &:hover {
+          svg {
+            fill: map-get($map: variables.$colors, $key: 'decoration');
+          }
+        }
+      }
+    }
+  }
+
+  small {
+    width: 100%;
+    color: map-get($map: variables.$colors, $key: 'alert');
+    text-align: right;
+  }
+}

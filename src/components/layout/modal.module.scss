@@ -1,0 +1,54 @@
+@use '../../styles/variables';
+
+@import '../../styles/animations';
+
+.modal {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 80%;
+  min-height: 50vh;
+  max-height: 70vh;
+  max-width: 50rem;
+  margin: auto;
+  padding: 0.5em;
+  overflow: scroll;
+  background-color: map-get($map: variables.$colors, $key: 'background');
+  border: 1px solid map-get($map: variables.$colors, $key: 'border');
+  box-shadow: 2px 2px 6px map-get($map: variables.$colors, $key: 'decoration');
+  z-index: 100;
+
+  .header {
+    width: 100%;
+    border-bottom: 1px solid map-get($map: variables.$colors, $key: 'border');
+    margin-bottom: 1rem;
+
+    h3 {
+      width: 100%;
+    }
+
+    .icon {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+
+      &:hover {
+        svg {
+          stroke: map-get($map: variables.$colors, $key: 'decoration');
+        }
+      }
+
+      svg {
+        stroke: map-get($map: variables.$colors, $key: 'border');
+        height: 2em;
+        width: auto;
+      }
+    }
+  }
+
+  .content {
+    width: 100%;
+  }
+}

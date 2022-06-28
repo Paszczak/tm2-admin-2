@@ -1,0 +1,50 @@
+@use '../../styles/variables';
+
+%icons-common {
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+
+  svg {
+    height: 1.5rem;
+    width: auto;
+  }
+}
+
+.news {
+  position: relative;
+
+  .newsTitle {
+    margin-top: 0;
+    color: map-get($map: variables.$colors, $key: 'decoration');
+    font-size: 1rem;
+    cursor: pointer;
+  }
+
+  .public {
+    @extend %icons-common;
+
+    svg {
+      fill: map-get($map: variables.$colors, $key: 'ok');
+    }
+  }
+
+  .private {
+    @extend %icons-common;
+
+    svg {
+      fill: map-get($map: variables.$colors, $key: 'border');
+    }
+  }
+
+  p {
+    width: 100%;
+    font-size: 1rem;
+  }
+
+  .newsFooter {
+    font-size: 0.8rem;
+    color: map-get($map: variables.$colors, $key: 'border');
+  }
+}

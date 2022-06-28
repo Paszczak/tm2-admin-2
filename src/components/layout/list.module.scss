@@ -1,0 +1,19 @@
+@use '../../styles/variables';
+
+@import '../../styles/animations';
+
+.list {
+  padding-inline-start: 0;
+  padding-inline-end: 0;
+  list-style: none;
+  display: grid;
+  gap: 1rem;
+}
+
+.gridCol2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.gridCol3 {
+  grid-template-columns: repeat(3, 1fr);
+}

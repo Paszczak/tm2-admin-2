@@ -1,0 +1,19 @@
+@use './variables';
+
+.signinPage {
+  border: 1px solid map-get($map: variables.$colors, $key: 'border');
+  padding: 1em;
+  border-radius: variables.$border-radius;
+  padding-bottom: 2rem;
+
+  h1 {
+    color: map-get($map: variables.$colors, $key: 'decoration');
+    text-align: center;
+  }
+}
+
+.buttonsGroup {
+  display: flex;
+  justify-content: space-between;
+  column-gap: 1rem;
+}

@@ -1,0 +1,27 @@
+@use '../../styles/variables';
+
+.header {
+  margin: 0;
+  border-bottom: 1px solid map-get($map: variables.$colors, $key: 'border');
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .title {
+    color: map-get($map: variables.$colors, $key: 'decoration');
+    margin-top: 0.5rem;
+    // font-size: 1.75rem;
+    font-weight: bold;
+  }
+
+  .icon {
+    height: 2rem;
+    width: 2rem;
+    margin-bottom: 1rem;
+
+    svg {
+      stroke: map-get($map: variables.$colors, $key: 'border');
+    }
+  }
+}

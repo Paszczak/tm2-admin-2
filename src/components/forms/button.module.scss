@@ -1,0 +1,44 @@
+@use '../../styles/variables';
+
+%button-common {
+  padding: 0.25em 1em;
+  border: 1px solid map-get($map: variables.$colors, $key: 'decoration');
+  width: 100%;
+  font-size: 0.9rem;
+  appearance: none;
+  outline: none;
+  transition: 250ms ease-in-out;
+
+  &:disabled {
+    border: 1px solid map-get($map: variables.$colors, $key: 'border');
+    background-color: map-get($map: variables.$colors, $key: 'border');
+
+    &:hover {
+      border: 1px solid map-get($map: variables.$colors, $key: 'border');
+      background-color: map-get($map: variables.$colors, $key: 'border');
+      color: map-get($map: variables.$colors, $key: 'background');
+    }
+  }
+}
+
+.buttonFilled {
+  @extend %button-common;
+  background-color: map-get($map: variables.$colors, $key: 'decoration');
+  color: map-get($map: variables.$colors, $key: 'background');
+
+  &:hover {
+    background-color: map-get($map: variables.$colors, $key: 'background');
+    color: map-get($map: variables.$colors, $key: 'decoration');
+  }
+}
+
+.buttonLight {
+  @extend %button-common;
+  background-color: map-get($map: variables.$colors, $key: 'background');
+  color: map-get($map: variables.$colors, $key: 'decoration');
+
+  &:hover {
+    background-color: map-get($map: variables.$colors, $key: 'decoration');
+    color: map-get($map: variables.$colors, $key: 'background');
+  }
+}

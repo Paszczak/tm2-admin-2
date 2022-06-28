@@ -1,0 +1,55 @@
+@use '../../styles/variables';
+
+%icon-common {
+  height: 1.5rem;
+  width: auto;
+  margin-right: 0.5rem;
+}
+
+.row {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .infoContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .label {
+      font-size: 1em;
+    }
+
+    .iconCurrent {
+      @extend %icon-common;
+
+      svg {
+        fill: map-get($map: variables.$colors, $key: 'ok');
+      }
+    }
+
+    .icon {
+      @extend %icon-common;
+
+      svg {
+        fill: map-get($map: variables.$colors, $key: 'border');
+      }
+    }
+  }
+
+  .delete {
+    @extend %icon-common;
+    margin: 0;
+
+    svg {
+      fill: map-get($map: variables.$colors, $key: 'border');
+    }
+
+    &:hover {
+      svg {
+        fill: map-get($map: variables.$colors, $key: 'decoration');
+      }
+    }
+  }
+}

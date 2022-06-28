@@ -1,0 +1,48 @@
+@use '../../styles/variables';
+
+.logo {
+  padding: 1em 0;
+  margin: 0 1em;
+  font-size: 1.25rem;
+  margin-bottom: 1em;
+  border-bottom: 1px solid map-get($map: variables.$colors, $key: 'background');
+
+  a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: map-get($map: variables.$colors, $key: 'background');
+
+    .icon {
+      margin-right: 0.5em;
+
+      svg {
+        height: 2em;
+        width: auto;
+        fill: map-get($map: variables.$colors, $key: 'background');
+      }
+    }
+  }
+}
+
+.navlist {
+  list-style: none;
+  padding-inline-start: 0;
+  margin-bottom: 6em;
+}
+
+.signOut {
+  padding: 0.5em 0;
+  margin: 0 1em;
+  border: 1px solid map-get($map: variables.$colors, $key: 'background');
+  border-radius: variables.$border-radius;
+  color: map-get($map: variables.$colors, $key: 'background');
+  text-align: center;
+  cursor: pointer;
+  transition: 250ms ease-in-out;
+
+  &:hover {
+    background-color: map-get($map: variables.$colors, $key: 'background');
+    color: map-get($map: variables.$colors, $key: 'decoration');
+  }
+}

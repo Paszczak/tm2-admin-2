@@ -1,0 +1,12 @@
+@use '../../styles/variables';
+
+.backdrop {
+  z-index: 20;
+  background-color: map-get($map: variables.$colors, $key: 'decoration');
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  opacity: 0.3;
+}

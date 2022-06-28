@@ -1,0 +1,9 @@
+@use '../../styles/variables';
+
+.errorMessage {
+  border: 1px solid map-get($map: variables.$colors, $key: 'alert');
+  padding: 0.5em;
+  text-align: center;
+  color: map-get($map: variables.$colors, $key: 'alert');
+  margin-bottom: 0.5rem;
+}

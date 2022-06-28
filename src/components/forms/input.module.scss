@@ -1,0 +1,61 @@
+@use '../../styles/variables';
+
+.row {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-width: 20rem;
+  margin-bottom: 1em;
+
+  label {
+    display: block;
+    color: map-get($map: variables.$colors, $key: 'decoration');
+    margin-bottom: 0.5rem;
+  }
+
+  .input {
+    padding: 0.5em;
+    font-size: 1rem;
+    border: 1px solid map-get($map: variables.$colors, $key: 'border');
+    outline: none;
+    align-self: stretch;
+
+    &:focus {
+      border-color: map-get($map: variables.$colors, $key: 'decoration');
+    }
+  }
+
+  .invalid {
+    border-color: map-get($map: variables.$colors, $key: 'alert');
+  }
+
+  .valid {
+    border-color: map-get($map: variables.$colors, $key: 'ok');
+    color: map-get($map: variables.$colors, $key: 'ok');
+  }
+
+  small {
+    width: 100%;
+    color: map-get($map: variables.$colors, $key: 'alert');
+    text-align: right;
+  }
+}
+
+.checkbox {
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+
+  .input {
+    width: 1rem;
+    appearance: none;
+    border: 1px solid map-get($map: variables.$colors, $key: 'border');
+    margin-left: 0.5rem;
+    margin-bottom: 0.5rem;
+
+    &:checked {
+      border: 1px solid map-get($map: variables.$colors, $key: 'decoration');
+      background-color: map-get($map: variables.$colors, $key: 'decoration');
+    }
+  }
+}
